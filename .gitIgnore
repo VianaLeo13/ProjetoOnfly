@@ -1,0 +1,39 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build TypeScript
+dist/
+*.js
+*.js.map
+*.d.ts
+
+# n8n local data
+n8n_data/
+.custom_nodes_build/
+
+# Editor/IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Arquivos de teste temporários
+*.tmp
+*.temp
+
+# Outros arquivos de cache
+.cache/

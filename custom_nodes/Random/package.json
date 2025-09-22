@@ -1,0 +1,10 @@
+{
+  "name": "n8n-nodes-random",
+  "version": "1.0.0",
+  "main": "Random.node.js",
+  "n8n": {
+    "nodes": [
+      "Random.node.js"
+    ]
+  }
+}
