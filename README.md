@@ -117,6 +117,47 @@ Para garantir que o node funcionava corretamente, realizei testes em dois nívei
 
 - **Node não aparece no n8n?** Reinicia o container que resolve: `docker-compose restart n8n`
 
+
+## ⚙️ Variáveis de Ambiente e Banco de Dados
+
+### PostgreSQL:
+- `POSTGRES_USER`: n8n (usuário do banco)
+- `POSTGRES_PASSWORD`: n8n (senha do banco)
+- `POSTGRES_DB`: n8n (nome do banco)
+- Porta: 5433 (mapeada para 5432 no container)
+
+### N8N:
+- `DB_TYPE`: postgresdb (tipo do banco de dados)
+- `DB_POSTGRESDB_HOST`: postgres (host do banco)
+- `DB_POSTGRESDB_PORT`: 5432 (porta do banco dentro do container)
+- `DB_POSTGRESDB_DATABASE`: n8n (nome do banco)
+- `DB_POSTGRESDB_USER`: n8n (usuário do banco)
+- `DB_POSTGRESDB_PASSWORD`: n8n (senha do banco)
+- `N8N_BASIC_AUTH_ACTIVE`: true (ativa autenticação básica)
+- `N8N_BASIC_AUTH_USER`: admin (usuário do n8n)
+- `N8N_BASIC_AUTH_PASSWORD`: admin (senha do n8n)
+- `N8N_PORT`: 5678 (porta do n8n)
+- `N8N_CUSTOM_EXTENSIONS`: /home/node/.n8n/custom (diretório de extensões)
+
+### Volumes:
+- `postgres_data`: Armazena os dados do PostgreSQL
+- `./n8n_data`: Armazena os dados do N8N
+- `./custom_nodes`: Armazena nós customizados
+
+### Monitoramento e Logs:
+
+Para verificar os logs dos serviços:
+```bash
+# Logs do N8N
+docker-compose logs n8n
+
+# Logs do PostgreSQL
+docker-compose logs postgres
+
+# Logs em tempo real
+docker-compose logs -f
+```
+
 ## OBRIGADO!
 
 - Obrigado Onfly , pela oportunidade deste teste desafiador! 
