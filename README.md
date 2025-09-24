@@ -26,7 +26,7 @@
 
 ## 🛠 O que usei?
 
-- n8n (nossa querida plataforma de automação)
+- n8n (plataforma de automação)
 - Node.js + TypeScript (para criar o node customizado)
 - Docker (porque a vida é mais fácil com containers)
 - PostgreSQL (pra guardar os dados do n8n)
@@ -116,6 +116,10 @@ Para garantir que o node funcionava corretamente, realizei testes em dois nívei
 ## 🤔 Problemas que pode aparecer
 
 - **Node não aparece no n8n?** Reinicia o container que resolve: `docker-compose restart n8n`
+
+## OBRIGADO!
+
+- Obrigado Onfly , pela oportunidade deste teste desafiador! 
 
 
 
