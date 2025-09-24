@@ -98,13 +98,22 @@ Depois que tudo subir, você pode acessar:
 - E rodar!
 O node cuida de toda a comunicação com a API e validação dos dados.
 
-## 🧪 Testes
-- Testei gerando números entre 1 e 100
-- Confirmei que o valor retornado está sempre dentro do intervalo
-- Node funciona dentro de workflows do n8n
+## 🧪 Testes / Validação
 
+Para garantir que o node funcionava corretamente, realizei testes em dois níveis:
 
-## 🤔 Problemas comuns
+1. **Testes manuais do node Random**
+   - Gerei números aleatórios entre diferentes intervalos (ex.: 1-100, 50-500)
+   - Confirmei que os valores retornados estavam sempre dentro do intervalo definido
+   - Testei a comunicação com a API do Random.org para validar a resposta
+
+2. **Testes dentro do Docker**
+   - Subi o contêiner usando `docker-compose up -d`
+   - Verifiquei se o container do n8n estava rodando corretamente
+   - Consultei os logs do container (`docker-compose logs -f n8n`) para confirmar que o node customizado foi carregado sem erros
+   - Executei workflows de teste dentro do n8n para garantir que o node funcionava conforme esperado
+
+## 🤔 Problemas que pode aparecer
 
 - **Node não aparece no n8n?** Reinicia o container que resolve: `docker-compose restart n8n`
 
