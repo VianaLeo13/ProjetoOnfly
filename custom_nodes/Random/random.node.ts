@@ -10,7 +10,7 @@ import {
 
 import axios from 'axios';
 
-export class Random implements INodeType {
+class Random implements INodeType {
     description: INodeTypeDescription = {
         displayName: 'Random',
         name: 'random',
@@ -119,3 +119,5 @@ export class Random implements INodeType {
         return [this.helpers.returnJsonArray(returnData)];
     }
 }
+
+module.exports = { random: Random };

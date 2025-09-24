@@ -28,6 +28,7 @@ services:
       N8N_BASIC_AUTH_PASSWORD: admin
       N8N_PORT: 5678
       N8N_CUSTOM_EXTENSIONS: /home/node/.n8n/custom
+      N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
     depends_on:
       - postgres
     volumes:

@@ -1,10 +1,22 @@
 {
   "name": "n8n-nodes-random",
   "version": "1.0.0",
-  "main": "Random.node.js",
+  "main": "random.node.js",
+  "scripts": {
+    "build": "tsc random.node.ts",
+    "dev": "tsc random.node.ts --watch"
+  },
   "n8n": {
     "nodes": [
-      "Random.node.js"
+      "random.node.js"
     ]
+  },
+  "devDependencies": {
+    "@sentry/node": "^10.14.0",
+    "@types/node": "^24.5.2",
+    "form-data": "^4.0.4",
+    "n8n-workflow": "^1.110.0",
+    "nock": "^14.0.10",
+    "typescript": "^5.9.2"
   }
 }

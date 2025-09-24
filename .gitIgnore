@@ -9,9 +9,13 @@ dist/
 *.js
 *.js.map
 *.d.ts
+!custom_nodes/Random/*.js
+!custom_nodes/Random/*.js.map
+!custom_nodes/Random/*.d.ts
 
 # n8n local data
-n8n_data/
+n8n_data/*
+!n8n_data/.gitkeep
 .custom_nodes_build/
 
 # Editor/IDE
