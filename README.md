@@ -15,7 +15,6 @@
 │       ├── 📄 random.node.js
 │       └── 📄 random.node.ts
 ├── 📁 imagens
-│   └── 🖼️ Onfly.gif
 ├── 📁 n8n_data
 ├── ⚙️ tsconfig.json
 ├── ⚙️ .gitignore
@@ -76,9 +75,19 @@ Depois que tudo subir, você pode acessar:
 
 - n8n: http://localhost:5678
 - Criar sua conta no n8n
-- Entrar na parte de workflow
-- Clicar no "+" no centro
+- Entrar na parte de workflow:
+- <img src="imagens/Passo1.png" align="center" style="width:100%;" alt="">
+- Clicar no "+" no centro:
 - Pesquisar pelo node "Random"
+- <img src="imagens/Passo2.png" align="center" style="width:100%;" alt="">
+- Escolher um numero de minimo e maximo:
+- <img src="imagens/Passo3.png" align="center" style="width:100%;" alt="">
+
+- Clicar no botão laranja execute step
+- <img src="imagens/Passo4.png" align="center" style="width:100%;" alt="">
+
+## Fluxo:
+<img src="imagens/TesteOnfly.png" align="center" style="width:100%;" alt="">
 
 ## 📦 Como o node funciona?
 
@@ -89,9 +98,16 @@ Depois que tudo subir, você pode acessar:
 - E rodar!
 O node cuida de toda a comunicação com a API e validação dos dados.
 
+## 🧪 Testes
+- Testei gerando números entre 1 e 100
+- Confirmei que o valor retornado está sempre dentro do intervalo
+- Node funciona dentro de workflows do n8n
+
+
 ## 🤔 Problemas comuns
 
 - **Node não aparece no n8n?** Reinicia o container que resolve: `docker-compose restart n8n`
-- **Erro de permissão?** Relaxa, configurei tudo pra se ajustar automaticamente
+
+
 
 
