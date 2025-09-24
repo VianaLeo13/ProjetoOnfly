@@ -20,8 +20,8 @@ E aí! Desenvolvi este node personalizado para o n8n que gera números aleatóri
 Só precisa ter instalado:
 - Docker
 - Docker Compose
-- Node.js
-- npm
+
+Não precisa ter Node.js instalado na sua máquina! Todo o ambiente de desenvolvimento roda dentro do Docker. 😉
 
 ## 🏃‍♂️ Bora rodar!
 
@@ -31,15 +31,12 @@ git clone https://github.com/VianaLeo13/ProjetoOnfly.git
 cd ProjetoOnfly
 ```
 
-2. Prepara o node customizado:
+2. Só rodar o Docker:
 ```bash
-cd custom_nodes/Random
-npm install
-npm run build   # Isso vai compilar o TypeScript
-cd ../..
+docker-compose up -d
 ```
 
-> 💡 **Nota**: Os arquivos compilados (.js) já estão incluídos no repositório, então esse passo só é necessário se você modificar o código!
+> 💡 **Nota**: Os arquivos já estão prontos pra uso! Se quiser desenvolver, todo o código do node customizado está em `custom_nodes/Random`
 
 3. Roda tudo com Docker:
 ```bash

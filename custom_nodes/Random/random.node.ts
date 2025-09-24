@@ -14,7 +14,7 @@ class Random implements INodeType {
     description: INodeTypeDescription = {
         displayName: 'Random',
         name: 'random',
-        icon: 'file:icon.svg', // verifique se o icon.svg está na mesma pasta
+        icon: 'file:icon.svg',
         group: ['transform'],
         version: 1,
         description: 'True Random Number Generator usando Random.org',
@@ -60,7 +60,6 @@ class Random implements INodeType {
         ],
     };
 
-    // ✅ Corrigido: use IExecuteFunctions do 'n8n-workflow'
     async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
         const items = this.getInputData();
         const returnData: IDataObject[] = [];

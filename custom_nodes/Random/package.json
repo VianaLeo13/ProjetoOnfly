@@ -1,22 +1,25 @@
 {
   "name": "n8n-nodes-random",
   "version": "1.0.0",
+  "description": "Node customizado para geração de números aleatórios no n8n",
   "main": "random.node.js",
   "scripts": {
-    "build": "tsc random.node.ts",
-    "dev": "tsc random.node.ts --watch"
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": ["n8n", "node", "random", "random.org"],
+  "author": "Leonardo Viana",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "n8n-workflow": "^1.110.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "typescript": "^5.9.2"
   },
   "n8n": {
     "nodes": [
       "random.node.js"
     ]
-  },
-  "devDependencies": {
-    "@sentry/node": "^10.14.0",
-    "@types/node": "^24.5.2",
-    "form-data": "^4.0.4",
-    "n8n-workflow": "^1.110.0",
-    "nock": "^14.0.10",
-    "typescript": "^5.9.2"
   }
 }
